@@ -119,7 +119,7 @@ table {
   --colorTextPlaceholder: rgba(239, 217, 131, 0.38)
     /*color(var(--base-text) a(0.38))*/;
     overflow-x: hidden;
-    overscroll-behavior: auto;
+    /* overscroll-behavior: auto; */
     /* overflow-y: hidden; */
     /* height: 100vh; */
 }
