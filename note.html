@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Sanatan Shrivastava" />
+    <meta name="description" content="ZURA-IITK, The robotics club of Indian Institute of Technology, Kanpur."/>
+	<meta name="keywords"  content="ZURA,IITK,Kanpur,Robotics,Robowars,Sanatan,Shrivastava,Shrivastava,team,2019,2k19"/>
+    <meta name="Resource-type" content="Document" />
+    <link rel="icon" type="image/x-icon" href="./src/images/favicon.ico">
+<!-- Chrome, Firefox OS, Opera and Vivaldi --><meta name="theme-color" content="#183856">
+<!-- Windows Phone --><meta name="msapplication-navbutton-color" content="#183856">
+<!-- iOS Safari --><meta name="apple-mobile-web-app-status-bar-style" content="#183856">
+    <title>Personal Note To Alumni|ZURA</title>
+    <link rel="stylesheet" href="./base.css"/>
+    <link rel="stylesheet" href="./note.css">
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="./navbar.css"/>
+    <link rel="stylesheet" href="animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+     integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+</head>
+<body>
+  <style>body{
+    margin: 0;
+    background-image: url("bgg.jpg");
+    }</style>
+    <aside id="nav-container">
+        <div id="nav-overlay"></div>
+        <nav id="nav-fullscreen" role="navigation">
+            <ul>
+                <li><a class="nav-link" href="https://dora.iitk.ac.in/funds/robowars-iitk.php">- Contribute</a></li>
+                <li><a class="nav-link" href="./target.html">- Our Target</a></li>
+                <li><a class="nav-link" href="./note.html">- Personal Note for Alumni</a></li>
+                <li><a class="nav-link" href="">- Gallery</a></li>
+                <li><a class="nav-link" href="">- Our Team</a></li>
+            </ul>
+        </nav>
+        <nav class="container">
+          <ul class=main_container>
+            <li><a href="index.html"><img src="./src/images/navlogo.png" class="photo" /><style>.photo{cursor:pointer;}"</style></a></li>
+            <li><a class="name" href="index.html">ZURA</a></li>
+            <li><a href="https://dora.iitk.ac.in/funds/robowars-iitk.php">Contribute</a></li>
+            <li><a href="./target.html">Target</a></li>
+            <li><a href="">Sponsors</a></li>
+            <li class="push_right">
+            <a href="./contacts.html">Contacts</a>
+            </li>
+          </ul>
+          </nav>
+
+        <a id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </aside>
+          <div class="note_personal">
+            <h1><u>Personal Note</u></h1></div>
+            <div class="content_note">
+<p><h2>Respected Alumni,</h2><br/>Your contribution to <b>your alma mater</b> upkeeps its glory and thereby brings glory to all of us who are currently studying here. We would like to hereby heartily <b>thank you</b> on behalf of our <b>entire constitution</b> and also request you to continue your <b>invaluable support</b>. It is highly appreciated. Being an <b>alumnus</b> of our institute, we are hopeful that you will also support and assist us in our attempt to further elevate our institute's fame and glory by means of our <b>Robowar</b> initiative by funding our project. We would be immensely grateful if you could <b>fund this initiative</b> of ours and we assure you that we will <b>stand up</b> to the <b>expectations</b> that are held from us.</p></div>
+
+
+<script src="./dist/main.bundle.js"></script>
+<script>
+resizeNav();
+window.addEventListener('resize', resizeNav)
+document.getElementById('nav-toggle').addEventListener('click', toggleNav)
+document.querySelectorAll(".nav-link").forEach(el => {
+    el.addEventListener('click', toggleNav)
+})
+
+function toggleNav () {
+    document.getElementById('nav-overlay').classList.toggle("open")
+    document.getElementById('nav-fullscreen').classList.toggle("open")
+    document.getElementById('nav-toggle').classList.toggle("open")
+}
+
+function resizeNav () {
+    let fscreen = document.getElementById('nav-fullscreen')
+    let overlay = document.getElementById('nav-overlay')
+    fscreen.style.height = "" + window.innerHeight + "px"
+    const radius = Math.sqrt(Math.pow(window.innerHeight, 2) + Math.pow(window.innerWidth, 2));
+    const diameter = radius * 2;
+    overlay.style.width = "" + diameter + "px"
+    overlay.style.height = "" + diameter + "px"
+    overlay.style.marginTop = "" + -radius + "px"
+    overlay.style.marginLeft = "" + -radius + "px"
+}
+document.addEventListener('keyup', (e) => {
+    if(e.keyCode === 27) {
+        document.getElementById('nav-overlay').classList.remove("open")
+        document.getElementById('nav-fullscreen').classList.remove("open")
+        document.getElementById('nav-toggle').classList.remove("open")
+    }
+})
+</script>
+<script>
+    document.getElementById('loader').addEventListener('loaderFinished', () => {
+        console.log('loader finished')
+        if (document.readyState == 'loading') {
+            window.addEventListener('load', removeLoader)
+        } else {
+            removeLoader();
+        }
+        function removeLoader () {
+            document.querySelector('body').classList.remove('loading')
+            document.getElementById('loader').remove()
+            document.getElementById('bg-video').play()
+        }
+    })
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</body>
+</html>

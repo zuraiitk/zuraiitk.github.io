@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Sanatan Shrivastava" />
+    <meta name="description" content="ZURA-IITK, The robotics club of Indian Institute of Technology, Kanpur."/>
+	<meta name="keywords"  content="ZURA,IITK,Kanpur,Robotics,Robowars,Sanatan,Shrivastava,Shrivastava,team,2019,2k19"/>
+    <meta name="Resource-type" content="Document" />
+    <link rel="icon" type="image/x-icon" href="./src/images/favicon.ico">
+<!-- Chrome, Firefox OS, Opera and Vivaldi --><meta name="theme-color" content="#183856">
+<!-- Windows Phone --><meta name="msapplication-navbutton-color" content="#183856">
+<!-- iOS Safari --><meta name="apple-mobile-web-app-status-bar-style" content="#183856">
+    <title>Our Target|ZURA</title>
+    <link rel="stylesheet" href="./base.css"/>
+    <link rel="stylesheet" href="./target.css">
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="./navbar.css"/>
+    <link rel="stylesheet" href="animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+     integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+</head>
+<body>
+  <style>body{
+    margin: 0;
+    background-image: url("bgg.jpg");
+    }</style>
+    <aside id="nav-container">
+        <div id="nav-overlay"></div>
+        <nav id="nav-fullscreen" role="navigation">
+            <ul>
+                <li><a class="nav-link" href="https://dora.iitk.ac.in/funds/robowars-iitk.php">- Contribute</a></li>
+                <li><a class="nav-link" href="./target.html">- Our Target</a></li>
+                <li><a class="nav-link" href="./note.html">- Personal Note for Alumni</a></li>
+                <li><a class="nav-link" href="">- Gallery</a></li>
+                <li><a class="nav-link" href="">- Our Team</a></li>
+            </ul>
+        </nav>
+        <nav class="container">
+          <ul class=main_container>
+            <li><a href="index.html"><img src="./src/images/navlogo.png" class="photo" /><style>.photo{cursor:pointer;}"</style></a></li>
+            <li><a class="name" href="index.html">ZURA</a></li>
+            <li><a href="https://dora.iitk.ac.in/funds/robowars-iitk.php"> Contribute</a></li>
+            <li><a href="./target.html">Target</a></li>
+            <li><a href="./sponsors.html">Sponsors</a></li>
+            <li class="push_right">
+            <a href="./contacts.html">Contacts</a>
+            </li>
+          </ul>
+          </nav>
+
+        <a id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </aside>
+          <div class="note_personal">
+            <h1><u>Our Target</u></h1></div>
+            <div class="content_note">
+              <p><strong>Our long term target is BattleBots USA - the most prestigious competition and we aim to become the first Indian team ever to win the competition thereby taking the achievements of IIT Kanpur to new heights in the field of robotics.</strong></p>
+              <p>As it happens, <b>our existing Science and Technology clubs</b> are <b>unable to support us financially</b> due to budget constraints.</p>
+              <p>Finance constitutes the backbone of any project.<b>We welcome any amount which will help this coveted project </b>in it's completion.</p>
+              <p>The task of putting together a robot is of paramount altitude and cannot be scaled without your support. Financial assistance is a crucial aspect of any team’s success. It lets us live up to our potential without any compromises and aim to achieve better than the best. It includes <b>monetary as well as in-kind donation</b> to the team. Funding for fabrication, materials, supplies and team logistics will also be highly appreciated. At the same time, endowment of service and parts will also be an influential role in the growth.</p>
+              <p>We strive for a stable and <b>mutually beneficial relationship</b> with our benefactors because we firmly believe that the knowledge and expertise gained from the sponsors are of paramount importance.</p>
+              <p>We are looking forward to <b>your generous contribution</b> and also invite you to join hands with Robowars IIT Kanpur for a captivating and fulfilling experience.</p>
+              <p>We would also like to mention that if our venture is successful and we win a few of the upcoming competitions the prize money from the various competitions would be ample to make us financially stable . Also, your generous contribution will <b>highly appreciated</b> and will always remain as one of the pillars of our success.</p>
+              </div>
+<script src="./dist/main.bundle.js"></script>
+<script>
+resizeNav();
+window.addEventListener('resize', resizeNav)
+document.getElementById('nav-toggle').addEventListener('click', toggleNav)
+document.querySelectorAll(".nav-link").forEach(el => {
+    el.addEventListener('click', toggleNav)
+})
+
+function toggleNav () {
+    document.getElementById('nav-overlay').classList.toggle("open")
+    document.getElementById('nav-fullscreen').classList.toggle("open")
+    document.getElementById('nav-toggle').classList.toggle("open")
+}
+
+function resizeNav () {
+    let fscreen = document.getElementById('nav-fullscreen')
+    let overlay = document.getElementById('nav-overlay')
+    fscreen.style.height = "" + window.innerHeight + "px"
+    const radius = Math.sqrt(Math.pow(window.innerHeight, 2) + Math.pow(window.innerWidth, 2));
+    const diameter = radius * 2;
+    overlay.style.width = "" + diameter + "px"
+    overlay.style.height = "" + diameter + "px"
+    overlay.style.marginTop = "" + -radius + "px"
+    overlay.style.marginLeft = "" + -radius + "px"
+}
+document.addEventListener('keyup', (e) => {
+    if(e.keyCode === 27) {
+        document.getElementById('nav-overlay').classList.remove("open")
+        document.getElementById('nav-fullscreen').classList.remove("open")
+        document.getElementById('nav-toggle').classList.remove("open")
+    }
+})
+</script>
+<script>
+    document.getElementById('loader').addEventListener('loaderFinished', () => {
+        console.log('loader finished')
+        if (document.readyState == 'loading') {
+            window.addEventListener('load', removeLoader)
+        } else {
+            removeLoader();
+        }
+        function removeLoader () {
+            document.querySelector('body').classList.remove('loading')
+            document.getElementById('loader').remove()
+            document.getElementById('bg-video').play()
+        }
+    })
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</body>
+</html>

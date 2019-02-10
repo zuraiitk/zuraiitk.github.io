@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Sanatan Shrivastava" />
+    <meta name="desciption" content="ZURA-IITK, The robotics club of Indian Institute of Technology, Kanpur."/>
+	<meta name="keywords"  content="ZURA,IITK,Kanpur,Robotics,Robowars,Sanatan,Shrivastava,Shrivastava,team,2019,2k19"/>
+    <meta name="Resource-type" content="Document" />
+    <link rel="icon" type="image/x-icon" href="./src/images/favicon.ico">
+<!-- Chrome, Firefox OS, Opera and Vivaldi --><meta name="theme-color" content="#183856">
+<!-- Windows Phone --><meta name="msapplication-navbutton-color" content="#183856">
+<!-- iOS Safari --><meta name="apple-mobile-web-app-status-bar-style" content="#183856">
+    <title>ZURA|IITK</title>
+    <link rel="stylesheet" href="./base.css"/>
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="./navbar.css"/>
+    <link rel="stylesheet" href="animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+     integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+</head>
+<body>
+  <style>body{
+    margin: 0;
+    background-image: url("bgg.jpg");
+    overflow-y: hidden;
+    }</style>
+    <aside id="nav-container">
+        <div id="nav-overlay"></div>
+        <nav id="nav-fullscreen" role="navigation">
+            <ul>
+                <li><a class="nav-link" href="https://dora.iitk.ac.in/funds/robowars-iitk.php">- Contribute</a></li>
+                <li><a class="nav-link" href="./target">- Our Target</a></li>
+                <li><a class="nav-link" href="./note">- Personal Note for Alumni</a></li>
+                <li><a class="nav-link" href="">- Gallery</a></li>
+                <li><a class="nav-link" href="">- Our Team</a></li>
+            </ul>
+        </nav>
+        <nav class="container">
+          <ul class=main_container>
+            <li><a href="index.html"><img src="./src/images/navlogo.png" class="photo" /><style>.photo{cursor:pointer;}"</style></a></li>
+            <li><a class="name" href="index.html">ZURA</a></li>
+            <li><a href="https://dora.iitk.ac.in/funds/robowars-iitk.php">Contribute</a></li>
+            <li><a href="./target.html">Target</a></li>
+            <li><a href="./sponsors.html">Sponsors</a></li>
+            <li class="push_right">
+            <a href="./contacts.html">Contacts</a>
+            </li>
+          </ul>
+          </nav>
+
+        <a id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </aside>
+          <div class="section">
+               <p>
+                ZURA
+               </p>
+              <style>
+              p{
+                position: absolute;
+                font-family: 'Raleway', sans-serif;
+                margin-right: 1em;
+                margin-top: 1em;
+                font-size: 15vw;
+                color: #ffffff;
+                }</style>
+          </div>
+          <footer></footer>
+    <h2 class="follow">Follow us on</h2>
+    <style>
+    .follow{
+      font-family: 'Raleway', sans-serif;
+      margin-left: 86%;
+      margin-top: 40%;
+      }</style>
+    <ul class="social-icons">
+        <li><a href="https://www.facebook.com/zura.iitk/" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/zura_iitk/" class="social-icon"> <i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://twitter.com/Zura_IITK" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
+    </ul>
+    <style>
+    a.social-icons{
+      display: inline;
+      margin-top: 40%;
+      margin-left: 10%;
+    }
+    ul.social-icons{
+      margin-left: 85.5%;
+
+      display: inline;
+      }</style>
+
+      <div class="footme">
+        <p><h3>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMade by Sanatan Shrivastava</h3></p>
+        <p><h3>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp©Copyright@ZURA-2019!</h3></p>
+      <style media="screen">
+        .footme{
+          font-family: 'Raleway', sans-serif;
+          margin-top: -5.5%;
+          margin-left: 40%;
+
+        }
+      </style>
+    </div>
+
+
+
+      <script src="./dist/main.bundle.js"></script>
+<script>
+resizeNav();
+window.addEventListener('resize', resizeNav)
+document.getElementById('nav-toggle').addEventListener('click', toggleNav)
+document.querySelectorAll(".nav-link").forEach(el => {
+    el.addEventListener('click', toggleNav)
+})
+
+function toggleNav () {
+    document.getElementById('nav-overlay').classList.toggle("open")
+    document.getElementById('nav-fullscreen').classList.toggle("open")
+    document.getElementById('nav-toggle').classList.toggle("open")
+}
+
+function resizeNav () {
+    let fscreen = document.getElementById('nav-fullscreen')
+    let overlay = document.getElementById('nav-overlay')
+    fscreen.style.height = "" + window.innerHeight + "px"
+    const radius = Math.sqrt(Math.pow(window.innerHeight, 2) + Math.pow(window.innerWidth, 2));
+    const diameter = radius * 2;
+    overlay.style.width = "" + diameter + "px"
+    overlay.style.height = "" + diameter + "px"
+    overlay.style.marginTop = "" + -radius + "px"
+    overlay.style.marginLeft = "" + -radius + "px"
+}
+document.addEventListener('keyup', (e) => {
+    if(e.keyCode === 27) {
+        document.getElementById('nav-overlay').classList.remove("open")
+        document.getElementById('nav-fullscreen').classList.remove("open")
+        document.getElementById('nav-toggle').classList.remove("open")
+    }
+})
+</script>
+<script>
+    document.getElementById('loader').addEventListener('loaderFinished', () => {
+        console.log('loader finished')
+        if (document.readyState == 'loading') {
+            window.addEventListener('load', removeLoader)
+        } else {
+            removeLoader();
+        }
+        function removeLoader () {
+            document.querySelector('body').classList.remove('loading')
+            document.getElementById('loader').remove()
+            document.getElementById('bg-video').play()
+        }
+    })
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</body>
+</html>

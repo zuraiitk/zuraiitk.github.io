@@ -1,0 +1,246 @@
+@import './navbar.css';
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+  font-family: 'Raleway', sans-serif;
+}
+[hidden] {
+  display: none;
+}
+html {
+  font-family: 'Source Sans Pro', sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 0;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+button,
+input {
+  line-height: normal;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+/* input[type="checkbox"], */
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+/* input[type="search"] { */ */
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+/* input[type="search"]::-webkit-search-cancel-button, */
+/* input[type="search"]::-webkit-search-decoration { */
+  -webkit-appearance: none;
+}
+/* button::-moz-focus-inner, */
+/* input::-moz-focus-inner { */
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  /* background-image: url("bgg.jpg"); */
+  --baseBackground: #2c097c;
+  --baseText: #ffffff;
+  --white: #eaecef;
+  --black: #050b10;
+  --colorTextHighlight: #ffffff;
+  --colorText: #ffffff; /*color(var(--base-text) a(0.87))*/;
+  --colorTextMuted: #ffffff;
+    /*color(var(--base-text) a(0.54))*/;
+  --colorTextPlaceholder: rgba(239, 217, 131, 0.38)
+    /*color(var(--base-text) a(0.38))*/;
+    overflow-x: hidden;
+    overscroll-behavior: auto;
+    /* overflow-y: hidden; */
+    /* height: 100vh; */
+}
+
+body {
+
+  font-family: 'Source Sans Pro', sans-serif;
+  color: var(--colorText);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--baseBackground);
+  color: var(--colorText);
+  /* background-image: url("background3.jpg"); */
+  height: 100vh;
+}
+
+h1, h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  line-height: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-link);
+  outline: none;
+}
+
+a:hover,
+a:focus {
+  color: currentColor;
+  outline: none;
+}
+
+button {
+  border-radius: 3em;
+  border: 1px solid currentColor;
+  height: 3em;
+  opacity: 0.8;
+  width: 11em;
+}
+
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+.main_container{
+  display: flex;
+  list-style: none;
+  font-size: 1em;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  /* box-shadow: 0 1.5px 4px rgba(0,0,0,.24), 0 1.5px 6px rgba(0,0,0,.12); */
+  margin-top: -1.7em;
+  color: #ffffff;
+  /* background-image: url(" bgg.jpg"); */
+}
+
+.name{
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+li{
+  margin-left: 0.1em;
+  padding: 10px;
+  color: #ffffff;
+  padding-left: 20px;
+}
+
+a{
+  text-decoration: none;
+  color: #ffffff;
+
+}
+
+.push_right{
+  margin-left: 26em;
+  color: #ffffff;
+}
+
+.section{
+  margin-left:4em;
+  font-size: 7em;
+  margin-bottom: 1em;
+  color: #ffffff;
+}
+
+
+ul {
+    padding:0;
+    list-style: none;
+}
+.follow-social-icons {
+    width: 400px;
+    display:block;
+    margin-left: 100%;
+    margin-top: 78%;
+    margin-right: -3%;
+
+}
+.social-icon {
+    color: #ffffff;
+}
+ul.social-icons {
+    margin-top: 10vh;
+    margin-right: 5em;
+    margin-right: 8em;
+}
+.social-icons li {
+    vertical-align: top;
+    display: inline;
+    height: 100px;
+
+
+}
